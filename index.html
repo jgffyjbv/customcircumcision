@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Custom Circumcision — a warm, gentle, holistic mohel serving Jewish and non-Jewish families in Brooklyn and across the U.S. Quick, drug-free, and meaningful. Free, no-commitment consultation." />
+<meta name="theme-color" content="#cfe6f7" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<title>Custom Circumcision — A Warm, Gentle, Holistic Mohel in Brooklyn, NY</title>
+<style>
+  /* Small page-specific tweaks layered on top of the shared stylesheet */
+  .hero-home { position: relative; background: linear-gradient(180deg, #eaf4fc 0%, #cfe6f7 100%); overflow: hidden; }
+  .hero-home__inner { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: center; padding: 64px 0 96px; }
+  .hero-home__eyebrow { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; font-size: .8rem; color: #2f6db0; background: rgba(255,255,255,.7); padding: 7px 14px; border-radius: 999px; }
+  .hero-home h1 { font-family: "Baloo 2", system-ui, sans-serif; color: #a8755f; font-size: clamp(2.3rem, 5vw, 3.5rem); line-height: 1.05; margin: 18px 0 10px; }
+  .hero-home__tag { font-family: "Baloo 2", system-ui, sans-serif; font-weight: 600; color: #b07d6a; font-size: clamp(1.1rem, 2.4vw, 1.45rem); margin: 0 0 14px; }
+  .hero-home__sub { color: #4a5560; font-size: 1.1rem; max-width: 30em; margin: 0 0 26px; }
+  .hero-home__ctas { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .hero-home__media { position: relative; }
+  .hero-home__img { width: 100%; height: 100%; max-height: 460px; object-fit: cover; border-radius: 28px; box-shadow: 0 24px 60px rgba(47,109,176,.22); border: 6px solid #fff; }
+  .hero-home__badge { position: absolute; left: -14px; bottom: 22px; background: #fff; border-radius: 18px; padding: 14px 18px; box-shadow: 0 14px 34px rgba(47,109,176,.18); display: flex; align-items: center; gap: 12px; max-width: 240px; }
+  .hero-home__badge strong { display: block; font-family: "Baloo 2", sans-serif; color: #a8755f; font-size: 1.5rem; line-height: 1; }
+  .hero-home__badge span { color: #4a5560; font-size: .85rem; }
+  .dot { position: absolute; border-radius: 50%; background: #fbe38a; opacity: .85; }
+  .dot--1 { width: 18px; height: 18px; top: 54px; right: 30%; }
+  .dot--2 { width: 11px; height: 11px; top: 120px; right: 24%; background: #f7d96b; }
+  .dot--3 { width: 26px; height: 26px; bottom: 60px; left: 6%; opacity:.6; }
+  .dot--4 { width: 14px; height: 14px; bottom: 130px; left: 18%; background:#f7d96b; opacity:.7; }
+
+  .heading-dot { display:inline-flex; align-items:center; gap:10px; }
+  .heading-dot::before { content:""; width:14px; height:14px; border-radius:50%; background:#fbe38a; box-shadow: 0 0 0 5px rgba(251,227,138,.3); }
+
+  .letter { max-width: 760px; margin: 0 auto; text-align: center; }
+  .letter h2 { font-family:"Baloo 2",sans-serif; color:#a8755f; font-size: clamp(1.7rem,3.2vw,2.2rem); margin: 0 0 8px; }
+  .letter__greet { font-family:"Baloo 2",sans-serif; color:#b07d6a; font-size:1.5rem; margin: 22px 0 16px; }
+  .letter p { color:#4a5560; font-size:1.12rem; line-height:1.75; margin: 0 0 18px; }
+  .letter__sign { font-family:"Baloo 2",sans-serif; color:#b07d6a; font-size:1.15rem; margin-top: 6px; }
+
+  .section-head { text-align:center; max-width: 660px; margin: 0 auto 40px; }
+  .section-head .eyebrow { display:inline-block; font-weight:800; letter-spacing:.06em; text-transform:uppercase; font-size:.8rem; color:#2f6db0; margin-bottom:10px; }
+  .section-head h2 { font-family:"Baloo 2",sans-serif; color:#a8755f; font-size:clamp(1.8rem,3.4vw,2.4rem); margin: 0 0 12px; }
+  .section-head p { color:#4a5560; font-size:1.08rem; margin:0; }
+
+  .compare { display:grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; max-width: 980px; margin: 0 auto; }
+  .compare-card { border-radius: 26px; padding: 32px 30px; position: relative; }
+  .compare-card h3 { font-family:"Baloo 2",sans-serif; font-size:1.5rem; margin: 0 0 4px; }
+  .compare-card .compare-sub { font-size:.92rem; margin: 0 0 22px; opacity:.85; }
+  .compare-card ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:14px; }
+  .compare-card li { display:flex; gap:12px; align-items:flex-start; line-height:1.5; }
+  .compare-card li svg { flex:none; margin-top:2px; }
+  .compare-card--hospital { background:#eef3f7; color:#5b6672; border:1px solid #dde6ee; }
+  .compare-card--hospital h3 { color:#5b6672; }
+  .compare-card--holistic { background: linear-gradient(165deg,#fff8e6 0%, #fdf0c9 100%); color:#4a5560; border:2px solid #fbe38a; box-shadow: 0 22px 50px rgba(176,125,106,.18); }
+  .compare-card--holistic h3 { color:#a8755f; }
+  .compare-card__flag { position:absolute; top:-14px; right:24px; background:#fbe38a; color:#7a5a18; font-weight:800; font-size:.78rem; letter-spacing:.05em; text-transform:uppercase; padding:6px 14px; border-radius:999px; box-shadow:0 8px 18px rgba(176,125,106,.25); }
+
+  .features-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width:1040px; margin:0 auto; }
+  .feature-card { background:#fff; border:1px solid #e9eef3; border-radius:22px; padding:28px 26px; box-shadow:0 10px 28px rgba(47,109,176,.06); transition: transform .25s ease, box-shadow .25s ease; }
+  .feature-card:hover { transform: translateY(-5px); box-shadow:0 18px 40px rgba(47,109,176,.12); }
+  .feature-card__icon { width:54px; height:54px; border-radius:16px; background:#cfe6f7; display:flex; align-items:center; justify-content:center; margin-bottom:16px; color:#2f6db0; }
+  .feature-card:nth-child(2) .feature-card__icon,
+  .feature-card:nth-child(4) .feature-card__icon,
+  .feature-card:nth-child(6) .feature-card__icon { background:#fdf0c9; color:#b07d6a; }
+  .feature-card h3 { font-family:"Baloo 2",sans-serif; color:#a8755f; font-size:1.2rem; margin:0 0 8px; }
+  .feature-card p { color:#4a5560; font-size:1rem; line-height:1.6; margin:0; }
+
+  .t-teaser { display:grid; grid-template-columns: repeat(3,1fr); gap:24px; max-width:1040px; margin:0 auto 36px; }
+  .t-card { background:#fff; border-radius:22px; padding:28px 26px; border:1px solid #e9eef3; box-shadow:0 10px 26px rgba(47,109,176,.06); display:flex; flex-direction:column; }
+  .t-card__stars { color:#f7d96b; margin-bottom:14px; letter-spacing:2px; }
+  .t-card p { color:#4a5560; font-size:1.04rem; line-height:1.65; margin:0 0 18px; font-style:italic; }
+  .t-card__who { margin-top:auto; font-weight:700; color:#a8755f; }
+  .t-card__who span { display:block; font-weight:500; color:#7c8794; font-size:.9rem; font-style:normal; }
+  .t-center { text-align:center; }
+
+  .cta-band { background: linear-gradient(165deg,#a9cfeb 0%, #cfe6f7 100%); text-align:center; position:relative; overflow:hidden; }
+  .cta-band h2 { font-family:"Baloo 2",sans-serif; color:#a8755f; font-size:clamp(1.9rem,3.8vw,2.6rem); margin:0 0 12px; }
+  .cta-band p { color:#3c5160; font-size:1.15rem; max-width:36em; margin:0 auto 28px; }
+  .cta-band__phone { display:inline-flex; align-items:center; gap:12px; font-family:"Baloo 2",sans-serif; font-size:clamp(1.8rem,4vw,2.4rem); color:#2f6db0; text-decoration:none; margin-bottom:24px; }
+  .cta-band__phone svg { width:30px; height:30px; }
+  .cta-band__actions { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; }
+
+  @media (max-width: 860px) {
+    .hero-home__inner { grid-template-columns: 1fr; padding: 40px 0 72px; text-align:center; }
+    .hero-home__ctas { justify-content:center; }
+    .hero-home__sub { margin-left:auto; margin-right:auto; }
+    .compare { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: 1fr 1fr; }
+    .t-teaser { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .features-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Custom Circumcision — home">
+        <svg class="brand__mark" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" fill="#cfe6f7"/>
+          <path d="M20 9c4.5 0 7.5 3 7.5 7 0 5.2-5.4 9.2-7.5 12-2.1-2.8-7.5-6.8-7.5-12 0-4 3-7 7.5-7z" fill="#fbe38a"/>
+          <circle cx="20" cy="16" r="3.4" fill="#b07d6a"/>
+        </svg>
+        <span>Custom Circumcision
+          <span class="brand__sub">Warm · Gentle · Holistic</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-wrap" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-wrap" id="nav-wrap">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a class="nav-phone" href="tel:+13479090309">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11.4 11.4 0 003.6.58 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.58 3.6 1 1 0 01-.24 1L6.6 10.8z" fill="currentColor"/></svg>
+            (347) 909-0309
+          </a>
+          <a class="btn btn--primary" href="contact.html">Schedule a free call</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- (1) HERO -->
+  <section class="hero-home">
+    <span class="dot dot--1" aria-hidden="true"></span>
+    <span class="dot dot--2" aria-hidden="true"></span>
+    <span class="dot dot--3" aria-hidden="true"></span>
+    <span class="dot dot--4" aria-hidden="true"></span>
+    <div class="container">
+      <div class="hero-home__inner">
+        <div class="hero-home__copy reveal">
+          <span class="hero-home__eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2c3.9 0 7 3.1 7 7 0 5.2-7 13-7 13S5 14.2 5 9c0-3.9 3.1-7 7-7z" fill="#2f6db0"/></svg>
+            Brooklyn, NY · Serving families nationwide
+          </span>
+          <h1>A warmer, gentler way to welcome your baby.</h1>
+          <p class="hero-home__tag">A compassionate method of circumcision — simple, healthy, holistic.</p>
+          <p class="hero-home__sub">We are a caring mohel offering a quick, drug-free, and meaningful circumcision in the comfort of loving hands. For Jewish and non-Jewish families alike — gentle, customized, and surrounded by the people you love.</p>
+          <div class="hero-home__ctas">
+            <a class="btn btn--primary" href="tel:+13479090309">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;margin-right:6px;"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11.4 11.4 0 003.6.58 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.58 3.6 1 1 0 01-.24 1L6.6 10.8z" fill="currentColor"/></svg>
+              Call (347) 909-0309
+            </a>
+            <a class="btn btn--secondary" href="contact.html">Schedule a free call</a>
+          </div>
+        </div>
+        <div class="hero-home__media reveal">
+          <img class="hero-home__img"
+               src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=900&q=80"
+               alt="A loving parent gently cradling a sleeping newborn baby"
+               loading="eager" width="900" height="600" />
+          <div class="hero-home__badge">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#fdf0c9"/><path d="M12 7v5l3 2" stroke="#b07d6a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <strong>30–45 sec</strong>
+              <span>Held in loving hands — calm and quick.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- wave divider -->
+    <svg class="wave-divider" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:70px;">
+      <path d="M0,40 C240,90 480,0 720,30 C960,60 1200,90 1440,40 L1440,90 L0,90 Z" fill="#ffffff"></path>
+    </svg>
+  </section>
+
+  <!-- (2) DEAR PARENTS LETTER -->
+  <section class="band band--white" style="padding:72px 0;">
+    <div class="container">
+      <div class="letter reveal">
+        <span class="heading-dot"><span style="font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;color:#2f6db0;">A note from us</span></span>
+        <p class="letter__greet">Dear Parents,</p>
+        <p>First, congratulations — what a beautiful, tender moment you're stepping into. We know the days around a new baby can hold equal parts joy and worry, and that a decision like this can feel weighty. Please breathe easy. Our whole approach is built around keeping your little one calm, comfortable, and held in loving hands, with you right there beside him.</p>
+        <p>There are no drugs, no straps, and nothing cold or clinical here — just a quick, gentle, time-honored method, customized to your baby, and warmly welcoming your loved ones to be part of it. Whatever questions are on your heart, we'd love to talk them through. Reach out anytime for a free, no-commitment conversation — your mohel will introduce himself personally once you do.</p>
+        <p class="letter__sign">With warmth and care,<br/>Custom Circumcision</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- (3) SIGNATURE COMPARISON -->
+  <section class="band band--blue" style="background:#eaf4fc;padding:80px 0;">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Did you know?</span>
+        <h2>Two very different ways to begin.</h2>
+        <p>A gentle, honest look at the holistic way side by side with the typical hospital experience.</p>
+      </div>
+      <div class="compare reveal">
+        <!-- Hospital / muted -->
+        <div class="compare-card compare-card--hospital">
+          <h3>Hospital / Doctor</h3>
+          <p class="compare-sub">The conventional clinical approach.</p>
+          <ul>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#cdd6df"/><path d="M12 7v6M12 16.5v.5" stroke="#5b6672" stroke-width="2" stroke-linecap="round"/></svg> Typically takes 15–30 minutes.</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#cdd6df"/><path d="M12 7v6M12 16.5v.5" stroke="#5b6672" stroke-width="2" stroke-linecap="round"/></svg> Baby is strapped down.</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#cdd6df"/><path d="M12 7v6M12 16.5v.5" stroke="#5b6672" stroke-width="2" stroke-linecap="round"/></svg> Involves an injection.</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#cdd6df"/><path d="M12 7v6M12 16.5v.5" stroke="#5b6672" stroke-width="2" stroke-linecap="round"/></svg> Clinical and cold setting.</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#cdd6df"/><path d="M12 7v6M12 16.5v.5" stroke="#5b6672" stroke-width="2" stroke-linecap="round"/></svg> Parents generally not present.</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#cdd6df"/><path d="M12 7v6M12 16.5v.5" stroke="#5b6672" stroke-width="2" stroke-linecap="round"/></svg> Clamps with limited sizes.</li>
+          </ul>
+        </div>
+        <!-- Holistic / warm hero -->
+        <div class="compare-card compare-card--holistic">
+          <span class="compare-card__flag">The holistic way</span>
+          <h3>Custom Circumcision</h3>
+          <p class="compare-sub">Warm, gentle, and meaningful.</p>
+          <ul>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#fbe38a"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="#a8755f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Just 30–45 seconds.</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#fbe38a"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="#a8755f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Baby held in loving hands.</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#fbe38a"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="#a8755f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> No drugs or injections.</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#fbe38a"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="#a8755f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Warm and meaningful.</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#fbe38a"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="#a8755f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Loved ones encouraged to be present.</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#fbe38a"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="#a8755f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Technique customized to fit each baby.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- (4) WHY FAMILIES CHOOSE US -->
+  <section class="band band--white" style="padding:80px 0;">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Gentle by design</span>
+        <h2>Why families choose us</h2>
+        <p>Every small detail is shaped around your baby's comfort — and your peace of mind.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Quick — 30 to 45 seconds</h3>
+          <p>The procedure itself is over in well under a minute, so your little one is back in your arms before he knows it.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Held in loving hands</h3>
+          <p>No straps and nothing clinical — your baby is gently cradled and soothed throughout, never restrained.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg></div>
+          <h3>No drugs or injections</h3>
+          <p>A natural, holistic method means no shots and no medications — just a gentle, time-honored technique.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="3.2" stroke="currentColor" stroke-width="2"/><path d="M3.5 19a5.5 5.5 0 0111 0M16 7.5a3 3 0 010 6M20.5 19a5.5 5.5 0 00-4-5.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Loved ones welcome</h3>
+          <p>Family and friends are warmly encouraged to gather close, turning the moment into a meaningful celebration.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l2.3 4.7 5.2.8-3.8 3.7.9 5.1L12 15.8 7.4 17l.9-5.1L4.5 8.5l5.2-.8L12 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Customized to your baby</h3>
+          <p>The technique is tailored to fit each baby individually — not a one-size-fits-all clamp, but careful, personal care.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 10.5a4 4 0 118 0c0 1.5-1 2.5-2 3.2-.7.5-1 .9-1 1.8M12 18.5v.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Warm, affordable &amp; free to ask</h3>
+          <p>Gentler on your family and more affordable than a hospital — and your first consultation is always free, with no commitment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- (5) TESTIMONIAL TEASER -->
+  <section class="band band--blue" style="background:#eaf4fc;padding:80px 0;">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">From our families</span>
+        <h2>Loved by parents like you</h2>
+        <p>Real words from Jewish and non-Jewish families we've had the honor to care for.</p>
+      </div>
+      <div class="t-teaser">
+        <div class="t-card reveal">
+          <div class="t-card__stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+          <p>"We were so nervous, and it ended up being the most peaceful moment. He was calm in our arms, it was over in seconds, and everyone we loved was right there with us."</p>
+          <div class="t-card__who">Rachel &amp; David<br/><span>Lakewood, NJ</span></div>
+        </div>
+        <div class="t-card reveal">
+          <div class="t-card__stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+          <p>"As a non-Jewish family, we weren't sure what to expect. From the first phone call we felt completely cared for — warm, patient, and never rushed. Truly wonderful."</p>
+          <div class="t-card__who">The Mitchell Family<br/><span>New Jersey</span></div>
+        </div>
+        <div class="t-card reveal">
+          <div class="t-card__stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+          <p>"Gentle, quick, and so reassuring. Our midwife recommended this approach, and we're so grateful she did. We'd choose it again without a second thought."</p>
+          <div class="t-card__who">Sarah L.<br/><span>Long Island, NY</span></div>
+        </div>
+      </div>
+      <div class="t-center reveal">
+        <a class="btn btn--secondary" href="testimonials.html">Read more family stories</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- (6) CLOSING CTA BAND -->
+  <section class="cta-band" style="padding:84px 0;">
+    <span class="dot dot--1" aria-hidden="true" style="top:34px;right:14%;"></span>
+    <span class="dot dot--3" aria-hidden="true" style="bottom:30px;left:10%;"></span>
+    <div class="container reveal">
+      <h2>Let's talk — no pressure, no commitment.</h2>
+      <p>Have a question or just want to hear how it works? We'd love to listen. Your first conversation is always free, and your mohel will introduce himself personally when you reach out.</p>
+      <a class="cta-band__phone" href="tel:+13479090309">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11.4 11.4 0 003.6.58 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.58 3.6 1 1 0 01-.24 1L6.6 10.8z" fill="currentColor"/></svg>
+        (347) 909-0309
+      </a>
+      <div class="cta-band__actions">
+        <a class="btn btn--primary" href="contact.html">Schedule a free call</a>
+        <a class="btn btn--secondary" href="mailto:customcircumcision@gmail.com">Email us</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a class="footer-brand brand" href="index.html" aria-label="Custom Circumcision — home">
+          <svg class="brand__mark" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <circle cx="20" cy="20" r="19" fill="#a9cfeb"/>
+            <path d="M20 9c4.5 0 7.5 3 7.5 7 0 5.2-5.4 9.2-7.5 12-2.1-2.8-7.5-6.8-7.5-12 0-4 3-7 7.5-7z" fill="#fbe38a"/>
+            <circle cx="20" cy="16" r="3.4" fill="#b07d6a"/>
+          </svg>
+          <span>Custom Circumcision</span>
+        </a>
+        <p class="footer__line">A compassionate, holistic method of circumcision — quick, gentle, and warm. Caring for Jewish and non-Jewish families across the country.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <ul class="footer-contact">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11.4 11.4 0 003.6.58 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.58 3.6 1 1 0 01-.24 1L6.6 10.8z" fill="currentColor"/></svg>
+            <a href="tel:+13479090309">(347) 909-0309</a>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1zm.4 2L12 12.6 19.6 8H4.4z" fill="currentColor"/></svg>
+            <a href="mailto:customcircumcision@gmail.com">customcircumcision@gmail.com</a>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2c3.9 0 7 3.1 7 7 0 5.2-7 13-7 13S5 14.2 5 9c0-3.9 3.1-7 7-7zm0 4.5A2.5 2.5 0 1012 11.5 2.5 2.5 0 0012 6.5z" fill="currentColor"/></svg>
+            <span>Brooklyn, NY · serving families nationwide</span>
+          </li>
+        </ul>
+        <a class="btn btn--primary" href="contact.html" style="margin-top:8px;">Schedule a free call</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Custom Circumcision. A warmer, gentler way.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  (function () {
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.querySelector('.nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+      // Close menu when a link is tapped
+      nav.querySelectorAll('.nav-links a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          nav.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  })();
+
+  // Highlight current page in nav
+  (function () {
+    var path = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (href === path) a.classList.add('is-active');
+    });
+  })();
+
+  // Gentle fade-up reveals on scroll
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !els.length) {
+      els.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+</body>
+</html>

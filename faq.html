@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Custom Circumcision — a warm, gentle, holistic mohel serving Jewish and non-Jewish families in Brooklyn and across the U.S. Quick, drug-free, and meaningful. Free, no-commitment consultation." />
+  <meta name="theme-color" content="#cfe6f7" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Commonly Asked Questions · Custom Circumcision — A Warm, Gentle Mohel</title>
+  <style>
+    /* Small page-specific tweaks for the FAQ accordion (uses shared palette/fonts) */
+    .faq-list { max-width: 820px; margin: 0 auto; }
+    .faq-item {
+      background: #fff;
+      border: 1px solid #e4eef6;
+      border-radius: 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 22px rgba(47, 109, 176, 0.06);
+      overflow: hidden;
+      transition: box-shadow .25s ease, border-color .25s ease;
+    }
+    .faq-item.is-open {
+      border-color: #cfe6f7;
+      box-shadow: 0 14px 30px rgba(47, 109, 176, 0.12);
+    }
+    .faq-q {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-align: left;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      padding: 20px 22px;
+      font-family: "Baloo 2", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 1.08rem;
+      line-height: 1.35;
+      color: #a8755f;
+    }
+    .faq-q:focus-visible {
+      outline: 3px solid #fbe38a;
+      outline-offset: -3px;
+      border-radius: 18px;
+    }
+    .faq-q .faq-dot {
+      flex: 0 0 auto;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #fbe38a;
+      box-shadow: 0 0 0 5px rgba(251, 227, 138, 0.28);
+      margin-top: 6px;
+    }
+    .faq-q .faq-icon {
+      flex: 0 0 auto;
+      margin-left: auto;
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #cfe6f7;
+      color: #2f6db0;
+      transition: transform .3s ease, background .25s ease;
+    }
+    .faq-item.is-open .faq-q .faq-icon {
+      transform: rotate(45deg);
+      background: #fbe38a;
+      color: #a8755f;
+    }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
+    }
+    .faq-a-inner {
+      padding: 0 24px 22px 48px;
+      color: #4a5560;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .faq-a-inner p { margin: 0 0 10px; }
+    .faq-a-inner p:last-child { margin-bottom: 0; }
+    @media (max-width: 560px) {
+      .faq-a-inner { padding-left: 24px; }
+      .faq-q { font-size: 1rem; padding: 18px 18px; }
+    }
+    .faq-help {
+      text-align: center;
+      max-width: 640px;
+      margin: 40px auto 0;
+      color: #4a5560;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html" aria-label="Custom Circumcision — home">
+          <svg class="brand__mark" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <circle cx="20" cy="20" r="19" fill="#cfe6f7"/>
+            <path d="M20 9c4.5 0 7.5 3 7.5 7 0 5.2-5.4 9.2-7.5 12-2.1-2.8-7.5-6.8-7.5-12 0-4 3-7 7.5-7z" fill="#fbe38a"/>
+            <circle cx="20" cy="16" r="3.4" fill="#b07d6a"/>
+          </svg>
+          <span>Custom Circumcision
+            <span class="brand__sub">Warm · Gentle · Holistic</span>
+          </span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-wrap" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-wrap" id="nav-wrap">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="nav-cta">
+            <a class="nav-phone" href="tel:+13479090309">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11.4 11.4 0 003.6.58 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.58 3.6 1 1 0 01-.24 1L6.6 10.8z" fill="currentColor"/></svg>
+              (347) 909-0309
+            </a>
+            <a class="btn btn--primary" href="contact.html">Schedule a free call</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO STRIP -->
+    <section class="hero hero--page">
+      <div class="container">
+        <div class="hero__inner reveal">
+          <span class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            Commonly Asked Questions
+          </span>
+          <h1>Gentle answers for caring parents</h1>
+          <p class="lead">
+            Deciding on a circumcision for your little one comes with questions — and that's
+            exactly how it should be. Below are the questions families ask us most, answered
+            warmly and honestly. If you don't see yours here, we'd be glad to talk it through
+            with you on a free, no-commitment call.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="contact.html">Schedule a free call</a>
+            <a class="btn btn--ghost" href="tel:+13479090309">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11.4 11.4 0 003.6.58 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.58 3.6 1 1 0 01-.24 1L6.6 10.8z" fill="currentColor"/></svg>
+              (347) 909-0309
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Wavy divider -->
+      <div class="wave wave--bottom" aria-hidden="true">
+        <svg viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,48 C240,110 480,0 720,40 C960,80 1200,20 1440,56 L1440,110 L0,110 Z" fill="#ffffff"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section class="band band--white">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            Your questions, answered
+          </span>
+          <h2>Everything you'd want to know</h2>
+          <p class="section-head__sub">
+            Take your time and read through. Every family is different, and there are no
+            silly questions — only a baby we want to care for gently.
+          </p>
+        </div>
+
+        <div class="faq-list reveal">
+
+          <!-- 1 -->
+          <div class="faq-item">
+            <h3 class="faq-h">
+              <button class="faq-q" type="button" aria-expanded="false">
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q-text">How is a holistic circumcision different from a hospital one?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>
+                  The biggest difference is the whole feeling of the moment. In a hospital, the
+                  procedure tends to take 15–30 minutes, the baby is strapped down, and parents
+                  are usually asked to wait elsewhere — it's clinical and cool by design.
+                </p>
+                <p>
+                  Our holistic way is quick and warm. The actual circumcision takes about
+                  30–45 seconds, your baby is cradled in loving hands the whole time, there are
+                  no drugs or injections, and the people who love him most are encouraged to be
+                  right there. Same goal — a gentler, more meaningful path to it.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="faq-item">
+            <h3 class="faq-h">
+              <button class="faq-q" type="button" aria-expanded="false">
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q-text">Is it safe?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>
+                  Your baby's safety is the heart of everything we do. Your mohel is certified and
+                  highly experienced, trained under a nationally renowned mohel who has performed
+                  over 20,000 circumcisions, and has personally cared for hundreds of babies from
+                  Jewish and non-Jewish families.
+                </p>
+                <p>
+                  Everything is done in a clean, careful, time-tested way, and we're trusted by
+                  doctors, midwives, and doulas. Because the method is quick and gentle, the baby
+                  spends far less time exposed and unsettled — and we're with you for aftercare
+                  every step of the way.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="faq-item">
+            <h3 class="faq-h">
+              <button class="faq-q" type="button" aria-expanded="false">
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q-text">How do you keep my baby comfortable without an injection?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>
+                  Comfort comes from speed and gentleness rather than drugs. Because the procedure
+                  itself is over in about 30–45 seconds, there simply isn't a long, distressing
+                  experience to medicate.
+                </p>
+                <p>
+                  Your baby is held close and soothed in loving hands, kept warm and secure, and
+                  many little ones settle quickly — often comforted with a sweet taste and a gentle
+                  feed right after. No injections, no clamps locked on for long stretches. Just calm,
+                  attentive care.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="faq-item">
+            <h3 class="faq-h">
+              <button class="faq-q" type="button" aria-expanded="false">
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q-text">How long does the whole visit take?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>
+                  The circumcision itself takes only about 30–45 seconds. The visit as a whole is
+                  unhurried and relaxed — we'll arrive, take time to greet you and your loved ones,
+                  gently prepare, perform the procedure, and then go over simple aftercare with you
+                  before we leave.
+                </p>
+                <p>
+                  Most families find the entire visit calm and surprisingly brief. We never rush
+                  you, and we never make you feel like one more appointment on a list.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="faq-item">
+            <h3 class="faq-h">
+              <button class="faq-q" type="button" aria-expanded="false">
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q-text">Where does the circumcision take place?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>
+                  Most often, right in the comfort of your own home — surrounded by familiar faces,
+                  your own things, and a calm that no clinic can offer. Many parents tell us this is
+                  one of their favorite parts: there's no waiting room, no sterile hallway, just your
+                  family in a place where everyone feels at ease.
+                </p>
+                <p>
+                  We come to you and serve families across the country. If your home isn't the right
+                  fit for any reason, we're happy to talk through other warm, comfortable options.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="faq-item">
+            <h3 class="faq-h">
+              <button class="faq-q" type="button" aria-expanded="false">
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q-text">Do you serve non-Jewish families too?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>
+                  Absolutely, and warmly so. We've cared for hundreds of babies from both Jewish and
+                  non-Jewish families, and you are every bit as welcome here.
+                </p>
+                <p>
+                  Many parents simply want a gentler, more personal alternative to a hospital
+                  procedure — without any religious ceremony at all. We'll meet you exactly where you
+                  are and tailor the experience to what feels right for your family.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="faq-item">
+            <h3 class="faq-h">
+              <button class="faq-q" type="button" aria-expanded="false">
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q-text">Can it be just the procedure, or can it include a ceremony?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>
+                  It's entirely your choice. Some families want a simple, private procedure and
+                  nothing more. Others want a meaningful ceremony with blessings, family, and a
+                  little celebration to mark the day.
+                </p>
+                <p>
+                  We're glad to do either — a quiet moment or a warm gathering. Just let us know what
+                  you have in mind, and we'll help shape the day around your family's wishes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="faq-item">
+            <h3 class="faq-h">
+              <button class="faq-q" type="button" aria-expanded="false">
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q-text">What ages do you care for — only newborns?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>
+                  Newborns are the most common, but not the only ones. We also care for older babies,
+                  and circumcision is possible for older children and even adults.
+                </p>
+                <p>
+                  Each age has its own gentle considerations, and the approach is always customized to
+                  fit the person in front of us. If you're wondering whether your situation is a good
+                  fit, just reach out — we'll give you an honest, caring answer.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9 -->
+          <div class="faq-item">
+            <h3 class="faq-h">
+              <button class="faq-q" type="button" aria-expanded="false">
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q-text">How much does it cost — and is it cheaper than a hospital?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>
+                  In most cases, yes — our holistic circumcision is more affordable than a hospital
+                  procedure, with no surprise facility fees and a far more personal experience.
+                </p>
+                <p>
+                  Because every family's situation is a little different, we like to share specific
+                  pricing during your free, no-commitment consultation, where we can answer your
+                  questions and make sure it's the right fit before anything is decided.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div class="faq-item">
+            <h3 class="faq-h">
+              <button class="faq-q" type="button" aria-expanded="false">
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q-text">What is the aftercare like, and will we have support?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>
+                  Aftercare is simple, and you won't be left to figure it out alone. Before we leave,
+                  we'll walk you through exactly what to expect over the next few days and how to keep
+                  your baby comfortable and clean — in plain, easy terms.
+                </p>
+                <p>
+                  Healing is usually quick and smooth, and we stay reachable afterward. If a question
+                  pops up at 2 a.m., or you just want reassurance, you can call. We're here for you
+                  beyond the visit itself.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11 -->
+          <div class="faq-item">
+            <h3 class="faq-h">
+              <button class="faq-q" type="button" aria-expanded="false">
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q-text">Can loved ones be present?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>
+                  Yes — and we warmly encourage it. Grandparents, siblings, close friends, whoever
+                  matters to you: this is a family moment, not a procedure tucked away behind closed
+                  doors.
+                </p>
+                <p>
+                  Having loved ones near brings a calm, supportive feeling to the whole experience —
+                  for you and for your baby. We'll help everyone feel comfortable and included.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12 -->
+          <div class="faq-item">
+            <h3 class="faq-h">
+              <button class="faq-q" type="button" aria-expanded="false">
+                <span class="faq-dot" aria-hidden="true"></span>
+                <span class="faq-q-text">What's the very first step?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+            </h3>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>
+                  Just a simple, free, no-commitment consultation. Call us or schedule a time, and your
+                  mohel will introduce himself personally, listen to what matters to your family, and
+                  answer every question you have — with no pressure at all.
+                </p>
+                <p>
+                  From there, you decide if it feels right. Reaching out costs nothing and commits you
+                  to nothing — it's simply the warmest place to start.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="faq-help reveal">
+          Still wondering about something? That's completely okay. The gentlest next step is
+          simply to talk it through — no commitment, no pressure, just answers.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="band band--blue cta-band">
+      <div class="wave wave--top" aria-hidden="true">
+        <svg viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,62 C240,8 480,96 720,64 C960,32 1200,92 1440,46 L1440,0 L0,0 Z" fill="#ffffff"/>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="cta-card reveal">
+          <span class="eyebrow eyebrow--center">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            A warmer, gentler way
+          </span>
+          <h2>Let's talk it through, gently</h2>
+          <p>
+            You don't have to have it all figured out. Reach out for a free, no-commitment call —
+            your mohel will introduce himself personally and answer every question with warmth and
+            patience. Your loved ones are always welcome.
+          </p>
+          <div class="cta-card__actions">
+            <a class="btn btn--primary" href="contact.html">Schedule a free call</a>
+            <a class="btn btn--ghost" href="tel:+13479090309">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11.4 11.4 0 003.6.58 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.58 3.6 1 1 0 01-.24 1L6.6 10.8z" fill="currentColor"/></svg>
+              Call (347) 909-0309
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a class="footer-brand brand" href="index.html" aria-label="Custom Circumcision — home">
+            <svg class="brand__mark" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <circle cx="20" cy="20" r="19" fill="#a9cfeb"/>
+              <path d="M20 9c4.5 0 7.5 3 7.5 7 0 5.2-5.4 9.2-7.5 12-2.1-2.8-7.5-6.8-7.5-12 0-4 3-7 7.5-7z" fill="#fbe38a"/>
+              <circle cx="20" cy="16" r="3.4" fill="#b07d6a"/>
+            </svg>
+            <span>Custom Circumcision</span>
+          </a>
+          <p class="footer__line">A compassionate, holistic method of circumcision — quick, gentle, and warm. Caring for Jewish and non-Jewish families across the country.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get in touch</h4>
+          <ul class="footer-contact">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11.4 11.4 0 003.6.58 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.58 3.6 1 1 0 01-.24 1L6.6 10.8z" fill="currentColor"/></svg>
+              <a href="tel:+13479090309">(347) 909-0309</a>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1zm.4 2L12 12.6 19.6 8H4.4z" fill="currentColor"/></svg>
+              <a href="mailto:customcircumcision@gmail.com">customcircumcision@gmail.com</a>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2c3.9 0 7 3.1 7 7 0 5.2-7 13-7 13S5 14.2 5 9c0-3.9 3.1-7 7-7zm0 4.5A2.5 2.5 0 1012 11.5 2.5 2.5 0 0012 6.5z" fill="currentColor"/></svg>
+              <span>Brooklyn, NY · serving families nationwide</span>
+            </li>
+          </ul>
+          <a class="btn btn--primary" href="contact.html" style="margin-top:8px;">Schedule a free call</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Custom Circumcision. A warmer, gentler way.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.querySelector('.nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          var open = nav.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        });
+        // Close menu when a link is tapped
+        nav.querySelectorAll('.nav-links a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            nav.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    })();
+
+    // Highlight current page in nav
+    (function () {
+      var path = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links a').forEach(function (a) {
+        var href = a.getAttribute('href');
+        if (href === path) a.classList.add('is-active');
+      });
+    })();
+
+    // Gentle fade-up reveals on scroll
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || !els.length) {
+        els.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+
+    // FAQ accordion (accessible, one-open-at-a-time optional; here independent toggles)
+    (function () {
+      var items = document.querySelectorAll('.faq-item');
+      items.forEach(function (item) {
+        var btn = item.querySelector('.faq-q');
+        var panel = item.querySelector('.faq-a');
+        if (!btn || !panel) return;
+        btn.addEventListener('click', function () {
+          var isOpen = item.classList.toggle('is-open');
+          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          if (isOpen) {
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+          } else {
+            panel.style.maxHeight = null;
+          }
+        });
+      });
+      // Recalculate open panel heights on resize so content never gets clipped
+      window.addEventListener('resize', function () {
+        document.querySelectorAll('.faq-item.is-open .faq-a').forEach(function (panel) {
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
